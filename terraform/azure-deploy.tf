@@ -16,6 +16,14 @@ module "keyvault" {
   environment_tag = var.environment_tag
 }
 
+module "storage_account" {
+  depends_on = [module.keyvault]
+  source = "./strg"
+  azure-rg-1 = var.azure-rg-1
+  loc1 = var.loc1
+  strgname = module.keyvault.strg_name
+}
+
 #backend
 terraform {
   backend "azurerm" {
