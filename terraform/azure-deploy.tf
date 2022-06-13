@@ -13,6 +13,7 @@ module "keyvault" {
   azure-rg-1 = var.azure-rg-1
   loc1 = var.loc1
   kvname = var.kvname
+  environment_tag = var.environment_tag
 }
 
 #backend

@@ -10,3 +10,7 @@ variable "kvname" {
   description = "Key Vault Name"
   type        = string
 }
+variable "environment_tag" {
+  type        = string
+  description = "Environment tag value"
+}
