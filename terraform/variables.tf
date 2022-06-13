@@ -10,3 +10,11 @@ variable "loc1" {
   description = "The location for this Lab environment"
   type        = string
 }
+variable "kvname" {
+  description = "Key Vault Name"
+  type        = string
+}
+variable "strgname" {
+  description = "Storage Account Name"
+  type        = string
+}

@@ -62,6 +62,14 @@ resource "azurerm_key_vault_secret" "vmpassword" {
   depends_on   = [azurerm_key_vault.kv1]
 }
 
+resource "azurerm_storage_account" "example" {
+  name                     = "examplestoracc"
+  resource_group_name      = var.azure-rg-1
+  location                 = var.loc1
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
 #backend
 terraform {
   backend "azurerm" {
