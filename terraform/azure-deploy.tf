@@ -8,6 +8,7 @@ resource "azurerm_resource_group" "rg1" {
 }
 
 module "keyvault" {
+  depends_on = [azurerm_resource_group.rg1]
   source = "./kv"
   azure-rg-1 = var.azure-rg-1
   loc1 = var.loc1
@@ -17,7 +18,6 @@ module "keyvault" {
 #backend
 terraform {
   backend "azurerm" {
-    depends_on           = [azurerm_resource_group.rg1]
     resource_group_name  = "neu-dev-data-rg"
     storage_account_name = "neutstadlsgen2"
     container_name       = "tfstate"
