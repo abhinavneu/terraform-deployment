@@ -4,5 +4,5 @@ output "strg_name" {
 }
 
 output "secret_value" {
-  value = "${data.azurerm_key_vault_secret.vmpassword.value}"
+  value = "${data.azurerm_key_vault_secret.sqlpassword.value}"
 }
