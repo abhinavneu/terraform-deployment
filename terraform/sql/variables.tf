@@ -7,10 +7,10 @@ variable "loc1" {
   type        = string
 }
 variable "sqlname" {
-  description = "Storage Account Name"
+  description = "SQL Server Name"
   type        = string
 }
-variable "sqlpwd" {
-  description = "Storage Account Name"
+variable "kvid" {
+  description = "Key Vault ID"
   type        = string
 }

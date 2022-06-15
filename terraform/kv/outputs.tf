@@ -3,6 +3,7 @@ output "strg_name" {
   description = "Storage Account Name"
 }
 
-output "secret_value" {
-  value = "${data.azurerm_key_vault_secret.sqlpassword.value}"
+output "kv_id" {
+  value = "${azurerm_key_vault.kv1.id}"
+  description = "Key Vault ID"
 }

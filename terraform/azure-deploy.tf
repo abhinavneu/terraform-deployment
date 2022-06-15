@@ -30,7 +30,7 @@ module "sql_server" {
   azure-rg-1 = var.azure-rg-1
   loc1 = var.loc1
   sqlname = var.sqlname
-  sqlpwd = module.keyvault.secret_value
+  kvid = module.keyvault.kv_id
 }
 
 #backend
