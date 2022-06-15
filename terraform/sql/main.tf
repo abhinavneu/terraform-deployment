@@ -3,7 +3,7 @@ data "azurerm_key_vault_secret" "kvsecret" {
   key_vault_id = var.kvid
 }
 
-resource "azurerm_sql_server" "example" {
+resource "azurerm_mssql_server" "example" {
   name                         = var.sqlname
   resource_group_name          = var.azure-rg-1
   location                     = var.loc1
